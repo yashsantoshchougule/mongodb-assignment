@@ -1,0 +1,40 @@
+<form class="filters-panel" method="get" action="{{ action_url }}">
+
+  {% if locked_category is defined and locked_category %}<input type="hidden" name="category" value="{{ locked_category }}">{% endif %}
+  <div class="filters-heading"><span>Refine results</span><a href="{{ clear_url }}">Clear</a></div>
+  {% if not locked_category %}
+  <label>Category
+    <select name="category">
+      <option value="">All categories</option>
+      {% for category in categories %}<option value="{{ category.name }}" {% if filters.category == category.name %}selected{% endif %}>{{ category.name }}</option>{% endfor %}
+    </select>
+  </label>
+  {% endif %}
+  <label>Brand
+    <select name="brand">
+      <option value="">All brands</option>
+      {% for brand in brands %}<option value="{{ brand }}" {% if filters.brand == brand %}selected{% endif %}>{{ brand }}</option>{% endfor %}
+    </select>
+  </label>
+  <div class="price-inputs">
+    <label>Min price<input type="number" name="min_price" min="0" placeholder="₹ 0" value="{{ filters.min_price or '' }}"></label>
+    <label>Max price<input type="number" name="max_price" min="0" placeholder="₹ 1,00,000" value="{{ filters.max_price or '' }}"></label>
+  </div>
+  <label>Minimum rating
+    <select name="min_rating">
+      <option value="">Any rating</option>
+      {% for rating in [4.5, 4.0, 3.5, 3.0] %}<option value="{{ rating }}" {% if filters.min_rating|string == rating|string %}selected{% endif %}>{{ rating }} and up</option>{% endfor %}
+    </select>
+  </label>
+  <label>Sort by
+    <select name="sort">
+      <option value="">Recommended</option>
+      <option value="price_low" {% if sort == 'price_low' %}selected{% endif %}>Price: low to high</option>
+      <option value="price_high" {% if sort == 'price_high' %}selected{% endif %}>Price: high to low</option>
+      <option value="rating" {% if sort == 'rating' %}selected{% endif %}>Rating: high to low</option>
+      <option value="discount" {% if sort == 'discount' %}selected{% endif %}>Highest discount</option>
+      <option value="name" {% if sort == 'name' %}selected{% endif %}>Name: A to Z</option>
+    </select>
+  </label>
+  <button class="button button-primary filter-submit" type="submit">Apply filters</button>
+</form>

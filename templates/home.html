@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}ValueVista Mini · Compare before you buy{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">CLEARER CHOICES, BETTER BUYS</p>
+    <h1>Find the <span>right product</span> at the right price.</h1>
+    <p class="hero-copy">Explore hand-picked tech, compare real specifications and see the best available store price in seconds.</p>
+    <div class="hero-points"><span>✓ No sign-up</span><span>✓ Compare up to 3 products</span><span>✓ Manual price listings</span></div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="orb orb-one"></div><div class="orb orb-two"></div>
+    <div class="hero-device device-main"><span>VALUE</span><strong>₹ 58,499</strong><small>Galaxy S24 5G</small></div>
+    <div class="hero-device device-float"><span>BEST DEAL</span><strong>22% off</strong><small>Compare prices</small></div>
+    <div class="hero-stars">★ 4.5 <small>2,543 reviews</small></div>
+  </div>
+</section>
+
+<section class="section section-categories">
+  <div class="section-heading"><div><p class="eyebrow">SHOP BY CATEGORY</p><h2>What are you looking for?</h2></div><a class="text-link" href="{{ url_for('categories') }}">View all categories <span>→</span></a></div>
+  <div class="category-grid">
+    {% for category in categories %}
+    <a class="category-card category-tone-{{ loop.index }}" href="{{ url_for('category_products', category_name=category.name) }}">
+      <span class="category-icon"><img src="{{ category.image }}" alt="" loading="lazy"></span>
+      <span><strong>{{ category.name }}</strong><small>{{ category.product_count }} products</small></span><b>→</b>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section tint-section">
+  <div class="section-heading"><div><p class="eyebrow">EDITOR'S PICKS</p><h2>Featured favourites</h2></div><a class="text-link" href="{{ url_for('products') }}">Browse all products <span>→</span></a></div>
+  <div class="product-grid">
+    {% for product in featured_products %}{% include "partials/product_card.html" %}{% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-heading"><div><p class="eyebrow">MOST LOVED</p><h2>Popular right now</h2></div><a class="text-link" href="{{ url_for('products', sort='rating') }}">See top rated <span>→</span></a></div>
+  <div class="product-grid">
+    {% for product in popular_products %}{% include "partials/product_card.html" %}{% endfor %}
+  </div>
+</section>
+
+<section class="section compare-intro">
+  <div class="compare-intro-number">01 <span>↔</span> 03</div>
+  <div><p class="eyebrow">COMPARE WITH CONFIDENCE</p><h2>Put your finalists side by side.</h2><p>Add up to three products and compare their price, ratings, features and specifications on one clean table.</p></div>
+  <a class="button button-primary" href="{{ url_for('products') }}">Start comparing</a>
+</section>
+{% endblock %}

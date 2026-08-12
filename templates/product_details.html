@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ product.name }} · ValueVista Mini{% endblock %}
+{% block content %}
+<section class="detail-breadcrumb"><a href="{{ url_for('products') }}">Products</a><span>/</span><a href="{{ url_for('category_products', category_name=product.category) }}">{{ product.category }}</a><span>/</span><b>{{ product.name }}</b></section>
+<section class="product-detail section">
+  <div class="detail-gallery"><div class="detail-image"><img src="{{ product.image }}" alt="{{ product.name }}">{% if product.discount %}<span class="discount-badge">{{ product.discount }}% off</span>{% endif %}</div><p class="image-note">Demo product image · Information is manually curated</p></div>
+  <div class="detail-summary">
+    <p class="product-eyebrow">{{ product.brand }} · {{ product.category }}</p>
+    <h1>{{ product.name }}</h1>
+    <p class="detail-model">{{ product.model }}</p>
+    <div class="rating-row detail-rating"><span class="rating-badge">★ {{ '%.1f'|format(product.rating) }}</span><span>Based on {{ '{:,}'.format(product.review_count) }} ratings</span></div>
+    <p class="description">{{ product.description }}</p>
+    <div class="detail-price"><div><span>Lowest price</span><strong>{{ product.lowest_price|inr }}</strong></div><div><span>MRP</span><s>{{ product.original_price|inr }}</s><em>You save {{ product.discount }}%</em></div></div>
+    <div class="detail-actions"><button class="button button-primary" type="button" data-compare-toggle data-compare-id="{{ product.product_id }}" data-compare-name="{{ product.name }}">Add to compare</button><a class="button button-secondary" href="#prices">View prices</a><a class="button button-ghost" href="{{ url_for('products') }}">← Back</a></div>
+    <div class="detail-trust"><span>✓ Hand-curated details</span><span>✓ Local MongoDB data</span><span>✓ Compare up to 3</span></div>
+  </div>
+</section>
+
+<section class="detail-content section">
+  <div class="detail-main">
+    <section class="detail-block"><div class="block-heading"><p class="eyebrow">AT A GLANCE</p><h2>Key features</h2></div><ul class="feature-list">{% for feature in product.key_features %}<li>✓ <span>{{ feature }}</span></li>{% endfor %}</ul></section>
+    <section class="detail-block"><div class="block-heading"><p class="eyebrow">FULL BREAKDOWN</p><h2>Specifications</h2></div><div class="specification-table">{% for label, value in product.specifications.items() %}<div><span>{{ label }}</span><strong>{{ value }}</strong></div>{% endfor %}</div></section>
+  </div>
+  <aside class="compare-nudge"><span>↔</span><h2>Not sure yet?</h2><p>Add this to your shortlist, then compare it with up to two alternatives.</p><a href="{{ url_for('products', category=product.category) }}">Browse {{ product.category }} →</a></aside>
+</section>
+
+<section id="prices" class="section price-section"><div class="section-heading"><div><p class="eyebrow">PRICE COMPARISON</p><h2>Available store prices</h2><p>Prices are entered manually for this academic demonstration.</p></div></div><div class="price-table-wrap"><table class="price-table"><thead><tr><th>Shopping platform</th><th>Price</th><th>Delivery</th><th>Availability</th><th></th></tr></thead><tbody>{% for listing in product.listings %}{% set link = listing.product_url|store_url %}<tr><td><span class="platform-mark">{{ listing.platform[0] }}</span><strong>{{ listing.platform }}</strong></td><td><b>{{ listing.price|inr }}</b></td><td>{{ listing.delivery }}</td><td><span class="stock-label">{{ listing.availability }}</span></td><td>{% if link %}<a class="button button-small button-secondary" href="{{ link }}" target="_blank" rel="noopener">View store</a>{% else %}<span class="store-unavailable">Link unavailable</span>{% endif %}</td></tr>{% endfor %}</tbody></table></div></section>
+{% endblock %}

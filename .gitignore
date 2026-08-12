@@ -1,0 +1,12 @@
+# Python runtime artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local configuration
+.env
+
+# Editor files
+.vscode/
+.idea/

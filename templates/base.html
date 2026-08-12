@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ValueVista Mini helps you compare products, features, ratings and store prices in one place.">
+  <title>{% block title %}ValueVista Mini{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body{% block body_attributes %}{% endblock %}>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="{{ url_for('home') }}" aria-label="ValueVista Mini home">
+        <span class="brand-mark">V</span>
+        <span>ValueVista <em>mini</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" data-primary-nav aria-label="Primary navigation">
+        <a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}is-active{% endif %}">Home</a>
+        <a href="{{ url_for('products') }}" class="{% if request.endpoint in ['products', 'search', 'category_products'] %}is-active{% endif %}">Products</a>
+        <a href="{{ url_for('categories') }}" class="{% if request.endpoint == 'categories' %}is-active{% endif %}">Categories</a>
+        <a class="compare-link {% if request.endpoint == 'compare' %}is-active{% endif %}" href="{{ url_for('compare') }}" data-compare-link>
+          Compare <span class="compare-count" data-compare-count>0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-stack" aria-live="polite">
+        {% for category, message in messages %}
+          <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand brand-footer" href="{{ url_for('home') }}">
+          <span class="brand-mark">V</span><span>ValueVista <em>mini</em></span>
+        </a>
+        <p>Compare thoughtfully. Shop confidently. Product information and prices are demo data stored locally for this project.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <a href="{{ url_for('products') }}">All products</a>
+        <a href="{{ url_for('categories') }}">Categories</a>
+      </div>
+      <div>
+        <h2>Need a hand?</h2>
+        <a href="{{ url_for('compare') }}" data-compare-link>Compare products</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© {{ current_year }} ValueVista Mini · Built with Flask &amp; MongoDB</div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "category_id": "CAT001",
+    "name": "Smartphones",
+    "description": "Compare 5G Android and iOS phones by camera, display, battery, and price.",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "category_id": "CAT002",
+    "name": "Laptops",
+    "description": "Find everyday, professional, and gaming laptops with clear specification comparisons.",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "category_id": "CAT003",
+    "name": "Headphones",
+    "description": "Browse wireless headphones and earbuds for music, calls, travel, and workouts.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "category_id": "CAT004",
+    "name": "Smartwatches",
+    "description": "Compare fitness tracking, health features, battery life, and smart connectivity.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+  }
+]

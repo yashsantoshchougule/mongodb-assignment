@@ -1,0 +1,787 @@
+[
+  {
+    "product_id": "PROD001",
+    "name": "Samsung Galaxy S24 5G",
+    "brand": "Samsung",
+    "model": "Galaxy S24",
+    "category": "Smartphones",
+    "description": "A compact premium Android phone with a bright AMOLED display, dependable cameras, and fast flagship performance.",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.6,
+    "review_count": 5843,
+    "original_price": 74999,
+    "lowest_price": 58499,
+    "discount": 22,
+    "featured": true,
+    "specifications": {
+      "Display": "6.2-inch Dynamic AMOLED 2X, 120 Hz",
+      "Processor": "Snapdragon 8 Gen 3",
+      "RAM": "8 GB",
+      "Storage": "256 GB",
+      "Rear Camera": "50 MP + 10 MP + 12 MP",
+      "Front Camera": "12 MP",
+      "Battery": "4000 mAh",
+      "Operating System": "Android 14",
+      "Network": "5G",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Compact 6.2-inch AMOLED display",
+      "Flagship Snapdragon performance",
+      "50 MP triple-camera system",
+      "Galaxy AI-ready Android experience",
+      "IP68 water and dust resistance"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 59999, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 58499, "delivery": "4-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 61000, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD002",
+    "name": "Apple iPhone 15",
+    "brand": "Apple",
+    "model": "iPhone 15",
+    "category": "Smartphones",
+    "description": "A polished iPhone with Dynamic Island, a 48 MP main camera, USB-C charging, and long software support.",
+    "image": "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.7,
+    "review_count": 8271,
+    "original_price": 79900,
+    "lowest_price": 65999,
+    "discount": 17,
+    "featured": true,
+    "specifications": {
+      "Display": "6.1-inch Super Retina XDR OLED",
+      "Processor": "A16 Bionic",
+      "RAM": "6 GB",
+      "Storage": "128 GB",
+      "Rear Camera": "48 MP Main + 12 MP Ultra Wide",
+      "Front Camera": "12 MP TrueDepth",
+      "Battery": "Up to 20 hours video playback",
+      "Operating System": "iOS 17",
+      "Network": "5G",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Dynamic Island notifications",
+      "48 MP high-resolution main camera",
+      "USB-C charging port",
+      "Cinematic 4K video recording",
+      "Durable color-infused glass back"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 67999, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 65999, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Reliance Digital", "price": 67490, "delivery": "2-4 Days", "availability": "Limited Stock", "product_url": "https://www.reliancedigital.in/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD003",
+    "name": "OnePlus 12R 5G",
+    "brand": "OnePlus",
+    "model": "12R",
+    "category": "Smartphones",
+    "description": "A fast, value-focused performance phone with a fluid AMOLED screen, large battery, and rapid wired charging.",
+    "image": "https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.5,
+    "review_count": 4935,
+    "original_price": 45999,
+    "lowest_price": 38999,
+    "discount": 15,
+    "featured": true,
+    "specifications": {
+      "Display": "6.78-inch 1.5K LTPO AMOLED, 120 Hz",
+      "Processor": "Snapdragon 8 Gen 2",
+      "RAM": "8 GB",
+      "Storage": "256 GB",
+      "Rear Camera": "50 MP + 8 MP + 2 MP",
+      "Front Camera": "16 MP",
+      "Battery": "5500 mAh",
+      "Charging": "100W SUPERVOOC",
+      "Operating System": "OxygenOS based on Android 14",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "120 Hz LTPO AMOLED display",
+      "Snapdragon 8 Gen 2 processor",
+      "5500 mAh long-life battery",
+      "100W fast charging",
+      "Clean OxygenOS interface"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 39999, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 38999, "delivery": "4-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 40499, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD004",
+    "name": "Google Pixel 8",
+    "brand": "Google",
+    "model": "Pixel 8",
+    "category": "Smartphones",
+    "description": "Google's camera-centric phone combines a compact OLED display, Tensor intelligence, and clean Android software.",
+    "image": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.4,
+    "review_count": 3264,
+    "original_price": 75999,
+    "lowest_price": 52999,
+    "discount": 30,
+    "featured": false,
+    "specifications": {
+      "Display": "6.2-inch Actua OLED, 120 Hz",
+      "Processor": "Google Tensor G3",
+      "RAM": "8 GB",
+      "Storage": "128 GB",
+      "Rear Camera": "50 MP + 12 MP Ultra Wide",
+      "Front Camera": "10.5 MP",
+      "Battery": "4575 mAh",
+      "Operating System": "Android 14",
+      "Network": "5G",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Google Tensor G3 processing",
+      "Excellent computational photography",
+      "Compact 120 Hz OLED display",
+      "Seven years of software updates",
+      "Magic Editor photo tools"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 54999, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 52999, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Reliance Digital", "price": 55990, "delivery": "2-4 Days", "availability": "Limited Stock", "product_url": "https://www.reliancedigital.in/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD005",
+    "name": "Xiaomi 14 Civi",
+    "brand": "Xiaomi",
+    "model": "14 Civi",
+    "category": "Smartphones",
+    "description": "A slim lifestyle smartphone with a curved AMOLED display, Leica-tuned cameras, and capable Snapdragon performance.",
+    "image": "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.3,
+    "review_count": 2870,
+    "original_price": 42999,
+    "lowest_price": 37999,
+    "discount": 12,
+    "featured": false,
+    "specifications": {
+      "Display": "6.55-inch 1.5K Curved AMOLED, 120 Hz",
+      "Processor": "Snapdragon 8s Gen 3",
+      "RAM": "8 GB",
+      "Storage": "256 GB",
+      "Rear Camera": "50 MP + 50 MP + 12 MP",
+      "Front Camera": "32 MP + 32 MP",
+      "Battery": "4700 mAh",
+      "Charging": "67W HyperCharge",
+      "Operating System": "Xiaomi HyperOS",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Slim curved-glass design",
+      "Leica Summilux camera system",
+      "Dual 32 MP front cameras",
+      "120 Hz 1.5K AMOLED display",
+      "67W wired charging"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 38999, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 37999, "delivery": "4-6 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 39499, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD006",
+    "name": "HP Victus 15 Gaming Laptop",
+    "brand": "HP",
+    "model": "Victus 15-fa0666TX",
+    "category": "Laptops",
+    "description": "A balanced 15.6-inch gaming laptop with a high-refresh display, dedicated NVIDIA graphics, and upgrade-friendly memory.",
+    "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.5,
+    "review_count": 4142,
+    "original_price": 85999,
+    "lowest_price": 67999,
+    "discount": 21,
+    "featured": true,
+    "specifications": {
+      "Display": "15.6-inch Full HD IPS, 144 Hz",
+      "Processor": "Intel Core i5-12500H",
+      "RAM": "16 GB DDR4",
+      "Storage": "512 GB PCIe NVMe SSD",
+      "Graphics": "NVIDIA GeForce RTX 3050 4 GB",
+      "Operating System": "Windows 11 Home",
+      "Battery": "52.5 Wh",
+      "Weight": "2.29 kg",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "144 Hz gaming display",
+      "NVIDIA RTX 3050 graphics",
+      "16 GB dual-channel memory",
+      "Full-size backlit keyboard",
+      "OMEN Gaming Hub controls"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 69999, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 67999, "delivery": "4-6 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Reliance Digital", "price": 70990, "delivery": "2-4 Days", "availability": "Limited Stock", "product_url": "https://www.reliancedigital.in/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD007",
+    "name": "Lenovo IdeaPad Slim 5",
+    "brand": "Lenovo",
+    "model": "IdeaPad Slim 5 14ABR8",
+    "category": "Laptops",
+    "description": "A portable work-and-study notebook with a 14-inch OLED screen, AMD Ryzen power, and a lightweight aluminum body.",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.4,
+    "review_count": 3688,
+    "original_price": 74990,
+    "lowest_price": 57990,
+    "discount": 23,
+    "featured": false,
+    "specifications": {
+      "Display": "14-inch 2.2K OLED",
+      "Processor": "AMD Ryzen 7 7730U",
+      "RAM": "16 GB LPDDR4X",
+      "Storage": "1 TB PCIe SSD",
+      "Graphics": "AMD Radeon Graphics",
+      "Operating System": "Windows 11 Home",
+      "Battery": "56.6 Wh",
+      "Weight": "1.46 kg",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Sharp 2.2K OLED display",
+      "16 GB memory and 1 TB SSD",
+      "Light 1.46 kg aluminum chassis",
+      "Rapid Charge support",
+      "Physical webcam privacy shutter"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 59990, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 57990, "delivery": "4-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 60490, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD008",
+    "name": "Dell Inspiron 15 3530",
+    "brand": "Dell",
+    "model": "Inspiron 3530",
+    "category": "Laptops",
+    "description": "A dependable large-screen everyday laptop for multitasking, coursework, and office productivity with a practical port selection.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.2,
+    "review_count": 2985,
+    "original_price": 68999,
+    "lowest_price": 53999,
+    "discount": 22,
+    "featured": false,
+    "specifications": {
+      "Display": "15.6-inch Full HD, 120 Hz",
+      "Processor": "Intel Core i5-1335U",
+      "RAM": "16 GB DDR4",
+      "Storage": "512 GB PCIe SSD",
+      "Graphics": "Intel Iris Xe Graphics",
+      "Operating System": "Windows 11 Home",
+      "Battery": "41 Wh",
+      "Weight": "1.66 kg",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "15.6-inch 120 Hz display",
+      "13th Gen Intel Core i5 processor",
+      "16 GB RAM for multitasking",
+      "ComfortView low blue-light panel",
+      "ExpressCharge battery support"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 54999, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 53999, "delivery": "4-6 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Vijay Sales", "price": 55990, "delivery": "2-4 Days", "availability": "Limited Stock", "product_url": "https://www.vijaysales.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD009",
+    "name": "ASUS TUF Gaming F15",
+    "brand": "ASUS",
+    "model": "TUF Gaming F15 FX507ZC4",
+    "category": "Laptops",
+    "description": "A rugged gaming machine pairing an Intel H-series processor with RTX graphics, military-grade durability, and a fast panel.",
+    "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.5,
+    "review_count": 4510,
+    "original_price": 99990,
+    "lowest_price": 77990,
+    "discount": 22,
+    "featured": true,
+    "specifications": {
+      "Display": "15.6-inch Full HD IPS, 144 Hz",
+      "Processor": "Intel Core i7-12700H",
+      "RAM": "16 GB DDR4",
+      "Storage": "1 TB PCIe 4.0 SSD",
+      "Graphics": "NVIDIA GeForce RTX 3050 4 GB",
+      "Operating System": "Windows 11 Home",
+      "Battery": "90 Wh",
+      "Weight": "2.2 kg",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "12th Gen Core i7 H-series CPU",
+      "RTX 3050 dedicated graphics",
+      "90 Wh high-capacity battery",
+      "144 Hz anti-glare display",
+      "MIL-STD-810H durability"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 79990, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 77990, "delivery": "4-6 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 80990, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD010",
+    "name": "Apple MacBook Air M3",
+    "brand": "Apple",
+    "model": "MacBook Air 13-inch M3",
+    "category": "Laptops",
+    "description": "A silent, highly portable MacBook with Apple M3 performance, a vivid Liquid Retina display, and excellent all-day battery life.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.8,
+    "review_count": 6231,
+    "original_price": 114900,
+    "lowest_price": 97990,
+    "discount": 15,
+    "featured": true,
+    "specifications": {
+      "Display": "13.6-inch Liquid Retina",
+      "Processor": "Apple M3 8-core CPU",
+      "RAM": "8 GB unified memory",
+      "Storage": "256 GB SSD",
+      "Graphics": "8-core GPU",
+      "Operating System": "macOS Sonoma",
+      "Battery": "Up to 18 hours",
+      "Weight": "1.24 kg",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Fanless Apple M3 performance",
+      "Bright Liquid Retina display",
+      "Only 1.24 kg",
+      "Up to 18 hours battery life",
+      "1080p FaceTime HD camera"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 99990, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 97990, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Reliance Digital", "price": 100490, "delivery": "2-3 Days", "availability": "Limited Stock", "product_url": "https://www.reliancedigital.in/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD011",
+    "name": "Sony WH-CH720N",
+    "brand": "Sony",
+    "model": "WH-CH720N",
+    "category": "Headphones",
+    "description": "Lightweight over-ear wireless headphones with active noise cancellation, clear calls, and long-lasting everyday battery life.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.5,
+    "review_count": 7392,
+    "original_price": 14990,
+    "lowest_price": 8990,
+    "discount": 40,
+    "featured": true,
+    "specifications": {
+      "Type": "Over-ear wireless headphones",
+      "Driver": "30 mm",
+      "Noise Cancellation": "Integrated Processor V1 ANC",
+      "Battery Life": "Up to 35 hours with ANC",
+      "Connectivity": "Bluetooth 5.2",
+      "Charging": "USB-C, 3-minute quick charge",
+      "Weight": "192 g",
+      "App Support": "Sony Headphones Connect",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Active noise cancellation",
+      "Up to 35-hour battery life",
+      "Very light 192 g design",
+      "Multipoint Bluetooth connection",
+      "Clear hands-free calling"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 9290, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 8990, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 9490, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD012",
+    "name": "boAt Rockerz 450 Pro",
+    "brand": "boAt",
+    "model": "Rockerz 450 Pro",
+    "category": "Headphones",
+    "description": "An affordable bass-forward wireless on-ear headset for daily music, online classes, and casual gaming.",
+    "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.2,
+    "review_count": 9120,
+    "original_price": 3990,
+    "lowest_price": 2499,
+    "discount": 37,
+    "featured": false,
+    "specifications": {
+      "Type": "On-ear wireless headphones",
+      "Driver": "40 mm",
+      "Noise Cancellation": "Passive noise isolation",
+      "Battery Life": "Up to 70 hours",
+      "Connectivity": "Bluetooth 5.3 and AUX",
+      "Charging": "USB-C ASAP Charge",
+      "Weight": "168 g",
+      "Microphone": "Built-in microphone",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "70-hour playback claim",
+      "40 mm boAt Signature Sound drivers",
+      "Low-latency BEAST Mode",
+      "USB-C fast charging",
+      "Foldable travel-friendly design"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 2599, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 2499, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Vijay Sales", "price": 2699, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.vijaysales.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD013",
+    "name": "JBL Tune 770NC",
+    "brand": "JBL",
+    "model": "Tune 770NC",
+    "category": "Headphones",
+    "description": "Comfortable over-ear Bluetooth headphones with adaptive noise cancelling and JBL's energetic Pure Bass sound profile.",
+    "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.4,
+    "review_count": 4158,
+    "original_price": 8999,
+    "lowest_price": 6499,
+    "discount": 28,
+    "featured": false,
+    "specifications": {
+      "Type": "Over-ear wireless headphones",
+      "Driver": "40 mm dynamic driver",
+      "Noise Cancellation": "Adaptive Noise Cancelling",
+      "Battery Life": "Up to 70 hours",
+      "Connectivity": "Bluetooth 5.3",
+      "Charging": "USB-C, 5-minute speed charge",
+      "Weight": "232 g",
+      "App Support": "JBL Headphones app",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Adaptive noise cancelling",
+      "JBL Pure Bass Sound",
+      "Up to 70-hour listening time",
+      "Bluetooth multipoint pairing",
+      "Custom EQ through JBL app"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 6699, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 6499, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 6899, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD014",
+    "name": "Apple AirPods Pro (2nd Generation)",
+    "brand": "Apple",
+    "model": "AirPods Pro 2",
+    "category": "Headphones",
+    "description": "Premium true wireless earbuds with strong active noise cancellation, transparent listening, and close integration with Apple devices.",
+    "image": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.7,
+    "review_count": 6884,
+    "original_price": 24900,
+    "lowest_price": 21990,
+    "discount": 12,
+    "featured": true,
+    "specifications": {
+      "Type": "True wireless in-ear earbuds",
+      "Driver": "Apple high-excursion driver",
+      "Noise Cancellation": "Active Noise Cancellation and Adaptive Audio",
+      "Battery Life": "Up to 6 hours per charge",
+      "Case Battery": "Up to 30 hours total",
+      "Connectivity": "Bluetooth 5.3",
+      "Charging": "USB-C, MagSafe, Qi",
+      "Water Resistance": "IP54",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Advanced active noise cancellation",
+      "Adaptive Audio and Transparency mode",
+      "Personalized Spatial Audio",
+      "USB-C MagSafe charging case",
+      "Find My speaker in charging case"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 22490, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 21990, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Reliance Digital", "price": 22990, "delivery": "2-4 Days", "availability": "Limited Stock", "product_url": "https://www.reliancedigital.in/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD015",
+    "name": "Sennheiser Accentum Wireless",
+    "brand": "Sennheiser",
+    "model": "Accentum Wireless",
+    "category": "Headphones",
+    "description": "Travel-ready over-ear headphones with Sennheiser sound tuning, hybrid ANC, and an exceptionally long battery rating.",
+    "image": "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.5,
+    "review_count": 2731,
+    "original_price": 16990,
+    "lowest_price": 11990,
+    "discount": 29,
+    "featured": false,
+    "specifications": {
+      "Type": "Over-ear wireless headphones",
+      "Driver": "37 mm dynamic driver",
+      "Noise Cancellation": "Hybrid Adaptive ANC",
+      "Battery Life": "Up to 50 hours with ANC",
+      "Connectivity": "Bluetooth 5.2",
+      "Charging": "USB-C, 10-minute quick charge",
+      "Weight": "222 g",
+      "App Support": "Sennheiser Smart Control",
+      "Warranty": "2 Years"
+    },
+    "key_features": [
+      "Sennheiser Signature Sound",
+      "Hybrid adaptive ANC",
+      "Up to 50-hour battery life",
+      "Sound personalization in app",
+      "Comfortable padded headband"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 12490, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 11990, "delivery": "4-6 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 12990, "delivery": "2-3 Days", "availability": "Limited Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD016",
+    "name": "Apple Watch SE (2nd Generation)",
+    "brand": "Apple",
+    "model": "Watch SE 2 44 mm",
+    "category": "Smartwatches",
+    "description": "An approachable Apple Watch for iPhone users with activity tracking, safety features, notifications, and reliable everyday performance.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.6,
+    "review_count": 5640,
+    "original_price": 29900,
+    "lowest_price": 24900,
+    "discount": 17,
+    "featured": true,
+    "specifications": {
+      "Display": "Retina LTPO OLED, 44 mm case",
+      "Compatibility": "iPhone 8 or later with current iOS",
+      "Health Sensors": "Optical heart sensor and high-g accelerometer",
+      "GPS": "Built-in GPS",
+      "Battery Life": "Up to 18 hours",
+      "Water Resistance": "50 m",
+      "Connectivity": "Wi-Fi and Bluetooth 5.3",
+      "Case Material": "Aluminum",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Crash Detection and Fall Detection",
+      "Comprehensive activity rings",
+      "Swimproof 50 m water resistance",
+      "Apple Pay and call notifications",
+      "Family Setup support"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 25490, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 24900, "delivery": "3-4 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Reliance Digital", "price": 25990, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.reliancedigital.in/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD017",
+    "name": "Samsung Galaxy Watch6",
+    "brand": "Samsung",
+    "model": "Galaxy Watch6 44 mm",
+    "category": "Smartwatches",
+    "description": "A Wear OS smartwatch with a large AMOLED screen, body-composition tools, health tracking, and tight Samsung Galaxy integration.",
+    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.4,
+    "review_count": 3976,
+    "original_price": 34999,
+    "lowest_price": 23999,
+    "discount": 31,
+    "featured": true,
+    "specifications": {
+      "Display": "1.5-inch Super AMOLED",
+      "Compatibility": "Android 10 or later",
+      "Health Sensors": "BioActive sensor, ECG, BIA",
+      "GPS": "Built-in GPS",
+      "Battery Life": "Up to 40 hours",
+      "Water Resistance": "5 ATM + IP68",
+      "Connectivity": "Bluetooth 5.3, Wi-Fi",
+      "Case Size": "44 mm aluminum",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Large 1.5-inch AMOLED display",
+      "Body composition analysis",
+      "Sleep coaching and heart monitoring",
+      "Google Wear OS apps",
+      "Fast wireless charging"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 24999, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 23999, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 25490, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD018",
+    "name": "Noise ColorFit Pro 5",
+    "brand": "Noise",
+    "model": "ColorFit Pro 5",
+    "category": "Smartwatches",
+    "description": "A value-packed square smartwatch with a large AMOLED panel, Bluetooth calling, and broad activity tracking for everyday use.",
+    "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.1,
+    "review_count": 7830,
+    "original_price": 4999,
+    "lowest_price": 3499,
+    "discount": 30,
+    "featured": false,
+    "specifications": {
+      "Display": "1.96-inch AMOLED",
+      "Compatibility": "Android and iOS",
+      "Health Sensors": "Heart rate, SpO2, stress monitor",
+      "GPS": "Connected GPS",
+      "Battery Life": "Up to 7 days",
+      "Water Resistance": "IP68",
+      "Connectivity": "Bluetooth 5.3 calling",
+      "Case Size": "1.96-inch square case",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Large 1.96-inch AMOLED screen",
+      "Bluetooth calling with dial pad",
+      "100+ sports modes",
+      "Built-in health suite",
+      "IP68 dust and water resistance"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 3599, "delivery": "2-3 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 3499, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Vijay Sales", "price": 3699, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.vijaysales.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD019",
+    "name": "Amazfit GTR 4",
+    "brand": "Amazfit",
+    "model": "GTR 4",
+    "category": "Smartwatches",
+    "description": "A round premium fitness watch with dual-band GPS, a bright AMOLED screen, strong battery life, and detailed training metrics.",
+    "image": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.4,
+    "review_count": 2573,
+    "original_price": 16999,
+    "lowest_price": 10999,
+    "discount": 35,
+    "featured": true,
+    "specifications": {
+      "Display": "1.43-inch AMOLED",
+      "Compatibility": "Android and iOS",
+      "Health Sensors": "BioTracker PPG optical sensor",
+      "GPS": "Dual-band six-satellite positioning",
+      "Battery Life": "Up to 14 days typical use",
+      "Water Resistance": "5 ATM",
+      "Connectivity": "Bluetooth 5.0 calling",
+      "Case Size": "46 mm aluminum alloy",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Dual-band GPS positioning",
+      "14-day typical battery life",
+      "1.43-inch always-on AMOLED display",
+      "150+ sports modes",
+      "Bluetooth phone calls"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 11499, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 10999, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Croma", "price": 11990, "delivery": "2-3 Days", "availability": "Limited Stock", "product_url": "https://www.croma.com/"}
+    ],
+    "created_at": "2026-08-04"
+  },
+  {
+    "product_id": "PROD020",
+    "name": "Fitbit Charge 6",
+    "brand": "Fitbit",
+    "model": "Charge 6",
+    "category": "Smartwatches",
+    "description": "A slim fitness tracker with accurate Google-powered exercise tools, built-in GPS, heart-rate tracking, and a comfortable band design.",
+    "image": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=900&q=80",
+    "rating": 4.3,
+    "review_count": 3447,
+    "original_price": 14999,
+    "lowest_price": 11999,
+    "discount": 20,
+    "featured": false,
+    "specifications": {
+      "Display": "Color AMOLED touchscreen",
+      "Compatibility": "Android and iOS",
+      "Health Sensors": "Optical heart rate, SpO2, skin temperature",
+      "GPS": "Built-in GPS and GLONASS",
+      "Battery Life": "Up to 7 days",
+      "Water Resistance": "50 m",
+      "Connectivity": "Bluetooth",
+      "Form Factor": "Slim fitness tracker",
+      "Warranty": "1 Year"
+    },
+    "key_features": [
+      "Built-in GPS for outdoor workouts",
+      "Google Maps and Wallet support",
+      "Heart-rate tracking during exercise",
+      "Sleep Score and stress tools",
+      "Up to seven days of battery"
+    ],
+    "listings": [
+      {"platform": "Amazon", "price": 12499, "delivery": "2-4 Days", "availability": "In Stock", "product_url": "https://www.amazon.in/"},
+      {"platform": "Flipkart", "price": 11999, "delivery": "3-5 Days", "availability": "In Stock", "product_url": "https://www.flipkart.com/"},
+      {"platform": "Reliance Digital", "price": 12690, "delivery": "2-3 Days", "availability": "Limited Stock", "product_url": "https://www.reliancedigital.in/"}
+    ],
+    "created_at": "2026-08-04"
+  }
+]

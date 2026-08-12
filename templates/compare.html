@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Compare Products · ValueVista Mini{% endblock %}
+{% block body_attributes %} data-compare-page="true"{% endblock %}
+{% block content %}
+<section class="page-hero compare-hero"><div><p class="eyebrow">SIDE-BY-SIDE COMPARISON</p><h1>Make a clearer choice.</h1><p>Compare up to three product finalists on the features that matter.</p></div><div class="comparison-progress"><span data-compare-count>0</span><small>of 3 selected</small></div></section>
+<section class="section compare-page" data-compare-status>
+  {% if compare_message %}<div class="compare-message">{{ compare_message }}</div>{% endif %}
+  {% if products %}
+  <div class="compare-actions"><p><strong>{{ products|length }} product{{ '' if products|length == 1 else 's' }}</strong> selected. {% if products|length < 2 %}Add one more product to see a useful comparison.{% else %}Scroll to compare every important detail.{% endif %}</p><div><a class="button button-secondary" href="{{ url_for('products') }}">Add products</a><button class="button button-ghost" type="button" data-compare-clear>Clear all</button></div></div>
+  <div class="comparison-table-wrap"><table class="comparison-table"><thead><tr><th>Compare</th>{% for product in products %}<th><div class="comparison-product"><button class="remove-comparison" type="button" aria-label="Remove {{ product.name }}" data-compare-remove="{{ product.product_id }}">×</button><img src="{{ product.image }}" alt="{{ product.name }}"><a href="{{ url_for('product_details', product_id=product.product_id) }}">{{ product.name }}</a><span>{{ product.brand }}</span></div></th>{% endfor %}</tr></thead><tbody><tr class="compare-highlight"><th>Starting price</th>{% for product in products %}<td><strong>{{ product.lowest_price|inr }}</strong><small><s>{{ product.original_price|inr }}</s></small></td>{% endfor %}</tr><tr><th>Rating</th>{% for product in products %}<td><span class="rating-badge">★ {{ '%.1f'|format(product.rating) }}</span><small>{{ '{:,}'.format(product.review_count) }} ratings</small></td>{% endfor %}</tr><tr><th>Discount</th>{% for product in products %}<td><span class="discount-text">{{ product.discount }}% off</span></td>{% endfor %}</tr><tr><th>Category</th>{% for product in products %}<td>{{ product.category }}</td>{% endfor %}</tr>{% for specification in spec_keys %}<tr><th>{{ specification }}</th>{% for product in products %}<td>{{ product.specifications.get(specification, '—') }}</td>{% endfor %}</tr>{% endfor %}<tr><th>Details</th>{% for product in products %}<td><a class="button button-small button-secondary" href="{{ url_for('product_details', product_id=product.product_id) }}">View details</a></td>{% endfor %}</tr></tbody></table></div>
+  {% else %}
+  <div class="empty-state comparison-empty"><span>↔</span><h2>Your comparison is empty</h2><p>Select two or three products to compare their prices, ratings and specifications in one place.</p><a class="button button-primary" href="{{ url_for('products') }}">Browse products</a></div>
+  {% endif %}
+</section>
+{% endblock %}

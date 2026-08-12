@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}Something went wrong · ValueVista Mini{% endblock %}
+{% block content %}<section class="error-page"><span>500</span><h1>Something went wrong.</h1><p>Please return home and try again. If the issue continues, check the MongoDB connection and seed data.</p><a class="button button-primary" href="{{ url_for('home') }}">Back to home</a></section>{% endblock %}

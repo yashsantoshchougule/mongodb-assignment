@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}All Products · ValueVista Mini{% endblock %}
+{% block content %}
+<section class="page-hero compact-hero"><div><p class="eyebrow">PRODUCT CATALOGUE</p><h1>Explore every product</h1><p>Filter by what matters, then compare your strongest contenders.</p></div></section>
+<section class="catalogue-layout section">
+  <aside>{% include "partials/filters.html" %}</aside>
+  <div class="catalogue-content">
+    <div class="results-bar"><p><strong>{{ products|length }}</strong> product{{ '' if products|length == 1 else 's' }} found</p><button class="mobile-filter-button" type="button" data-filter-toggle>Filter &amp; sort</button></div>
+    {% if products %}<div class="product-grid">{% for product in products %}{% include "partials/product_card.html" %}{% endfor %}</div>{% else %}{% include "partials/empty_state.html" %}{% endif %}
+  </div>
+</section>
+{% endblock %}

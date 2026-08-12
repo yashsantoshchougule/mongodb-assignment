@@ -1,0 +1,32 @@
+[
+  {
+    "platform_id": "PLAT001",
+    "name": "Amazon",
+    "logo": "https://placehold.co/160x80/f8fafc/1d4ed8?text=Amazon",
+    "website": "https://www.amazon.in/"
+  },
+  {
+    "platform_id": "PLAT002",
+    "name": "Flipkart",
+    "logo": "https://placehold.co/160x80/f8fafc/1d4ed8?text=Flipkart",
+    "website": "https://www.flipkart.com/"
+  },
+  {
+    "platform_id": "PLAT003",
+    "name": "Croma",
+    "logo": "https://placehold.co/160x80/f8fafc/1d4ed8?text=Croma",
+    "website": "https://www.croma.com/"
+  },
+  {
+    "platform_id": "PLAT004",
+    "name": "Reliance Digital",
+    "logo": "https://placehold.co/160x80/f8fafc/1d4ed8?text=Reliance+Digital",
+    "website": "https://www.reliancedigital.in/"
+  },
+  {
+    "platform_id": "PLAT005",
+    "name": "Vijay Sales",
+    "logo": "https://placehold.co/160x80/f8fafc/1d4ed8?text=Vijay+Sales",
+    "website": "https://www.vijaysales.com/"
+  }
+]

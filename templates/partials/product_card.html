@@ -1,0 +1,19 @@
+<article class="product-card">
+  <a class="product-image-wrap" href="{{ url_for('product_details', product_id=product.product_id) }}" aria-label="View {{ product.name }} details">
+    <img src="{{ product.image }}" alt="{{ product.name }}" loading="lazy">
+    {% if product.discount %}<span class="discount-badge">{{ product.discount }}% off</span>{% endif %}
+  </a>
+  <div class="product-card-body">
+    <p class="product-eyebrow">{{ product.brand }} · {{ product.category }}</p>
+    <h3><a href="{{ url_for('product_details', product_id=product.product_id) }}">{{ product.name }}</a></h3>
+    <div class="rating-row"><span class="rating-badge">★ {{ '%.1f'|format(product.rating) }}</span><span>{{ '{:,}'.format(product.review_count) }} reviews</span></div>
+    <div class="price-row">
+      <strong>{{ product.lowest_price|inr }}</strong>
+      <span>{{ product.original_price|inr }}</span>
+    </div>
+    <div class="card-actions">
+      <a class="button button-secondary" href="{{ url_for('product_details', product_id=product.product_id) }}">Details</a>
+      <button class="button button-compare" type="button" data-compare-toggle data-compare-id="{{ product.product_id }}" data-compare-name="{{ product.name }}">Compare</button>
+    </div>
+  </div>
+</article>

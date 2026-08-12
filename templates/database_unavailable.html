@@ -1,0 +1,3 @@
+{% extends "base.html" %}
+{% block title %}MongoDB unavailable · ValueVista Mini{% endblock %}
+{% block content %}<section class="error-page"><span>!</span><h1>MongoDB is not available yet.</h1><p>Start your local MongoDB service, check the values in <code>.env</code>, then run <code>python seed_data.py</code> once to load the sample catalogue.</p><a class="button button-primary" href="{{ url_for('about') }}">About the project</a></section>{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ category.name }} · ValueVista Mini{% endblock %}
+{% block content %}
+<section class="page-hero category-hero"><div><a class="breadcrumb" href="{{ url_for('categories') }}">← All categories</a><p class="eyebrow">{{ category.name|upper }}</p><h1>{{ category.name }}</h1><p>{{ category.description }}</p></div><span class="category-hero-icon"><img src="{{ category.image }}" alt="" loading="lazy"></span></section>
+<section class="catalogue-layout section">
+  <aside>{% include "partials/filters.html" %}</aside>
+  <div class="catalogue-content"><div class="results-bar"><p><strong>{{ products|length }}</strong> product{{ '' if products|length == 1 else 's' }} in {{ category.name }}</p><button class="mobile-filter-button" type="button" data-filter-toggle>Filter &amp; sort</button></div>{% if products %}<div class="product-grid">{% for product in products %}{% include "partials/product_card.html" %}{% endfor %}</div>{% else %}{% include "partials/empty_state.html" %}{% endif %}</div>
+</section>
+{% endblock %}

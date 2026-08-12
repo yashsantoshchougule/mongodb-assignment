@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Categories · ValueVista Mini{% endblock %}
+{% block content %}
+<section class="page-hero categories-hero"><div><p class="eyebrow">EXPLORE BY TYPE</p><h1>Find your next favourite.</h1><p>Start with a category, then narrow down the details and deal that work for you.</p></div></section>
+<section class="section category-page-grid">{% for category in categories %}<article class="full-category-card category-tone-{{ loop.index }}"><div class="full-category-icon"><img src="{{ category.image }}" alt="" loading="lazy"></div><div><p>{{ category.product_count }} products available</p><h2>{{ category.name }}</h2><p class="category-description">{{ category.description }}</p><a class="text-link" href="{{ url_for('category_products', category_name=category.name) }}">Browse {{ category.name }} <span>→</span></a></div></article>{% endfor %}</section>
+{% endblock %}
