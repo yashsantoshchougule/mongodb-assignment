@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime
 import re
 from functools import wraps
 from threading import Lock
@@ -117,10 +118,15 @@ class MongoRepository:
     def platforms(self):
         return self.db["platforms"]
 
+    @property
+    def users(self):
+        return self.db["users"]
+
     @_translate_database_errors
     def ensure_indexes(self) -> None:
         """Create the indexes used by seeding, browsing, and filtering."""
         self.products.create_index("product_id", unique=True)
+        self.users.create_index("username", unique=True)
         self.products.create_index([("category", ASCENDING), ("brand", ASCENDING)])
         self.products.create_index([("lowest_price", ASCENDING)])
         self.products.create_index([("rating", DESCENDING)])
@@ -228,6 +234,23 @@ class MongoRepository:
         if not isinstance(name, str) or not name.strip():
             return None
         return self.categories.find_one({"name": _exact_case_insensitive(name)})
+
+    @_translate_database_errors
+    def create_user(self, username: str, email: str, password_hash: str) -> dict[str, Any]:
+        user = {
+            "username": username,
+            "email": email,
+            "password_hash": password_hash,
+            "created_at": datetime.now().isoformat(),
+        }
+        self.users.insert_one(user)
+        return user
+
+    @_translate_database_errors
+    def get_user_by_username(self, username: str) -> Optional[dict[str, Any]]:
+        if not isinstance(username, str) or not username.strip():
+            return None
+        return self.users.find_one({"username": username.strip()})
 
     @_translate_database_errors
     def get_deals(self, limit: Any = 12) -> list[Product]:

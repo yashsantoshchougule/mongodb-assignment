@@ -45,10 +45,10 @@ def validate_catalogue(
     platforms: list[dict[str, Any]],
 ) -> None:
     """Catch accidental seed-data edits before anything is written to MongoDB."""
-    if len(products) != 20:
-        raise ValueError("sample_products.json must contain exactly 20 products.")
-    if len(categories) != 4:
-        raise ValueError("sample_categories.json must contain exactly 4 categories.")
+    if len(products) != 120:
+        raise ValueError("sample_products.json must contain exactly 120 products.")
+    if len(categories) != 6:
+        raise ValueError("sample_categories.json must contain exactly 6 categories.")
 
     product_ids = [product.get("product_id") for product in products]
     if len(set(product_ids)) != len(product_ids):

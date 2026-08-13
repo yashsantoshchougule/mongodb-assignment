@@ -24,6 +24,17 @@
         <a class="compare-link {% if request.endpoint == 'compare' %}is-active{% endif %}" href="{{ url_for('compare') }}" data-compare-link>
           Compare <span class="compare-count" data-compare-count>0</span>
         </a>
+        {% if current_user %}
+          <span class="user-nav">
+            <span class="user-greeting">Hi, {{ current_user.username }}</span>
+            <a href="{{ url_for('logout') }}" class="auth-link logout-link">Logout</a>
+          </span>
+        {% else %}
+          <span class="user-nav">
+            <a href="{{ url_for('login') }}" class="auth-link {% if request.endpoint == 'login' %}is-active{% endif %}">Login</a>
+            <a href="{{ url_for('register') }}" class="button button-primary auth-button">Register</a>
+          </span>
+        {% endif %}
       </nav>
     </div>
   </header>

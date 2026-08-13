@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Login · ValueVista Mini{% endblock %}
+{% block content %}
+<section class="auth-page">
+  <div class="auth-card">
+    <div class="auth-header">
+      <span class="auth-icon">👤</span>
+      <h1>Welcome back</h1>
+      <p>Log in to your ValueVista Mini account</p>
+    </div>
+    <form class="auth-form" method="post" action="{{ url_for('login') }}">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required autocomplete="current-password">
+      </div>
+      <button class="button button-primary auth-submit" type="submit">Log in</button>
+    </form>
+    <p class="auth-switch">Don't have an account? <a href="{{ url_for('register') }}">Create one</a></p>
+  </div>
+</section>
+{% endblock %}

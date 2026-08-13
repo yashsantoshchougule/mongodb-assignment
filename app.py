@@ -7,7 +7,8 @@ from functools import wraps
 from typing import Any
 from urllib.parse import urlparse
 
-from flask import Flask, abort, render_template, request, url_for
+from flask import Flask, abort, render_template, request, url_for, flash, redirect, session
+from werkzeug.security import generate_password_hash, check_password_hash
 
 from config import Config
 from database import DatabaseUnavailableError, get_repository
@@ -58,8 +59,11 @@ def create_app(repository: Any | None = None) -> Flask:
         return None
 
     @app.context_processor
-    def inject_global_context() -> dict[str, int]:
-        return {"current_year": datetime.now().year}
+    def inject_global_context() -> dict[str, Any]:
+        user = None
+        if "username" in session:
+            user = repo().get_user_by_username(session["username"])
+        return {"current_year": datetime.now().year, "current_user": user}
 
     def repo() -> Any:
         return app.extensions["valuevista_repository"]
@@ -126,7 +130,6 @@ def create_app(repository: Any | None = None) -> Flask:
             categories=repo().get_categories_with_counts(),
             featured_products=repo().get_featured_products(limit=4),
             popular_products=repo().get_popular_products(limit=4),
-            deal_products=repo().get_deals(limit=3),
         )
 
     @app.get("/products")
@@ -144,21 +147,60 @@ def create_app(repository: Any | None = None) -> Flask:
         )
         return render_template("products.html", **context)
 
-    @app.get("/search")
+    @app.route("/login", methods=["GET", "POST"])
     @database_view
-    def search():
-        query = clean_text(request.args.get("q"))
-        filters = requested_filters()
-        sort = requested_sort()
-        context = catalogue_context(filters=filters, sort=sort, query=query)
-        context.update(
-            {
-                "search_query": query,
-                "action_url": request.path,
-                "clear_url": url_for("search", q=query),
-            }
-        )
-        return render_template("search_results.html", **context)
+    def login():
+        if "username" in session:
+            return redirect(url_for("home"))
+        if request.method == "POST":
+            username = request.form.get("username", "").strip()
+            password = request.form.get("password", "")
+            if not username or not password:
+                flash("Please fill in all fields.", "error")
+                return render_template("login.html")
+            user = repo().get_user_by_username(username)
+            if user and check_password_hash(user["password_hash"], password):
+                session["username"] = user["username"]
+                flash(f"Welcome back, {user['username']}!", "success")
+                return redirect(url_for("home"))
+            flash("Invalid username or password.", "error")
+        return render_template("login.html")
+
+    @app.route("/register", methods=["GET", "POST"])
+    @database_view
+    def register():
+        if "username" in session:
+            return redirect(url_for("home"))
+        if request.method == "POST":
+            username = request.form.get("username", "").strip()
+            email = request.form.get("email", "").strip()
+            password = request.form.get("password", "")
+            confirm = request.form.get("confirm_password", "")
+            if not username or not email or not password or not confirm:
+                flash("Please fill in all fields.", "error")
+                return render_template("register.html")
+            if len(username) < 3 or len(username) > 20:
+                flash("Username must be 3-20 characters.", "error")
+                return render_template("register.html")
+            if password != confirm:
+                flash("Passwords do not match.", "error")
+                return render_template("register.html")
+            if len(password) < 6:
+                flash("Password must be at least 6 characters.", "error")
+                return render_template("register.html")
+            if repo().get_user_by_username(username):
+                flash("Username already taken.", "error")
+                return render_template("register.html")
+            repo().create_user(username, email, generate_password_hash(password))
+            flash("Account created! Please log in.", "success")
+            return redirect(url_for("login"))
+        return render_template("register.html")
+
+    @app.get("/logout")
+    def logout():
+        session.pop("username", None)
+        flash("You have been logged out.", "success")
+        return redirect(url_for("home"))
 
     @app.get("/product/<product_id>")
     @database_view
@@ -225,17 +267,6 @@ def create_app(repository: Any | None = None) -> Flask:
             spec_keys=spec_keys,
             compare_message=compare_message,
         )
-
-    @app.get("/deals")
-    @database_view
-    def deals():
-        products_with_deals = repo().get_deals(limit=24)
-        max_discount = max((product.get("discount", 0) for product in products_with_deals), default=0)
-        return render_template("deals.html", products=products_with_deals, max_discount=max_discount)
-
-    @app.get("/about")
-    def about():
-        return render_template("about.html")
 
     @app.errorhandler(404)
     def not_found(_error):

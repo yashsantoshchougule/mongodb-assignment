@@ -22,5 +22,17 @@
     "name": "Smartwatches",
     "description": "Compare fitness tracking, health features, battery life, and smart connectivity.",
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "category_id": "CAT005",
+    "name": "Tablets",
+    "description": "Browse tablets for productivity, entertainment, and creative work with stylus support.",
+    "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "category_id": "CAT006",
+    "name": "Cameras",
+    "description": "Compare mirrorless, DSLR, and action cameras for photography and videography.",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80"
   }
 ]
