@@ -1,80 +1,143 @@
-# ValueVista Mini
+ValueVista Mini
 
-ValueVista Mini is a Flask and MongoDB product-comparison demo. It contains a manually curated catalogue of 20 products across Smartphones, Laptops, Headphones, and Smartwatches. Prices, availability, specifications, and store links are demonstration data; they are not live retailer data.
+ValueVista Mini is a product-comparison web application built for a MongoDB academic project. It lets users browse electronic products, filter the catalogue, view specifications and sample store prices, and compare up to three products side by side.
 
-## Run locally
+Demo project: Product information, ratings, prices, availability, and store links are manually prepared sample data. They are not live ecommerce data.
 
-1. Install and start [MongoDB Community Server](https://www.mongodb.com/try/download/community). The default connection is `mongodb://localhost:27017/` and the app uses the `valuevista_mini` database.
-2. Open PowerShell in the project folder and create a virtual environment:
+Project overview
 
-   ```powershell
-   cd 'C:\yash\projects\mongoDB project\mongodb_small_project'
-   py -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   py -m pip install -r requirements.txt
-   Copy-Item .env.example .env
-   ```
+The application stores its catalogue in MongoDB and displays it through a Flask website. The included seed data contains 120 products across six categories: Smartphones, Laptops, Headphones, Smartwatches, Tablets, and Cameras. It also defines five shopping platforms: Amazon, Flipkart, Croma, Reliance Digital, and Vijay Sales. Each product has three sample platform listings.
 
-3. Adjust `.env` only if your MongoDB server uses a different URI or database name.
-4. Import the idempotent sample catalogue:
+Users can:
 
-   ```powershell
-   py seed_data.py
-   ```
+Browse products and categories.
 
-5. Start the Flask site:
+Filter by category, brand, price range, and minimum rating.
 
-   ```powershell
-   py app.py
-   ```
+Sort by price, rating, discount, or name.
 
-6. Visit `http://127.0.0.1:5000`.
+View a product's features, specifications, and store listings.
 
-If seeding reports that MongoDB is unavailable, start the local MongoDB service (or `mongod`) and confirm `MONGO_URI` in `.env`. The normal application runtime intentionally uses MongoDB only; it does not switch to a local JSON or in-memory fallback.
+Compare up to three products in one table.
 
-## Environment settings
+Register, log in, and log out.
 
-Copy `.env.example` to `.env` and set the following values as needed:
+Repository structure
 
-```dotenv
-FLASK_SECRET_KEY=change-this-for-a-private-deployment
-MONGO_URI=mongodb://localhost:27017/
-MONGO_DB_NAME=valuevista_mini
-MONGO_SERVER_SELECTION_TIMEOUT_MS=5000
-```
+mongodb-assignment/
+├── app.py             # Flask application and page routes
+├── database.py        # MongoDB access
+├── config.py          # Application settings
+├── seed_data.py       # Sample-data import
+├── data/              # Product, category, and platform JSON files
+├── templates/         # HTML pages
+├── static/            # CSS and JavaScript
+├── test_routes.py     # Route tests
+├── requirements.txt   # Python dependencies
+└── .env.example       # Example environment configuration
 
-## Seed data
+Tech stack
 
-The seed script reads the following versioned JSON files:
+Layer
 
-- `data/sample_products.json` — 20 products, each with key features, category-specific specifications, and exactly three manual platform listings.
-- `data/sample_categories.json` — four category records.
-- `data/sample_platforms.json` — the manual retail platforms used by the listings.
+Technology
 
-`seed_data.py` validates the files and uses MongoDB upserts keyed by `product_id`, `category_id`, and `platform_id`. It is safe to run again after editing the sample records: matching records are updated rather than duplicated.
+Backend
 
-## Database interface
+Python, Flask
 
-Flask routes should import the repository rather than embed MongoDB queries:
+Database
 
-```python
-from database import DatabaseUnavailableError, get_repository
+MongoDB, PyMongo
 
-repository = get_repository()
-products = repository.get_products(
-    filters={"category": "Laptops", "min_price": 30000, "min_rating": 4},
-    sort="price_low",
-    query="gaming",
-)
-```
+Frontend
 
-`get_repository()` accepts no arguments or a Flask-style config mapping. Its public helpers are:
+HTML, CSS, JavaScript, Jinja templates
 
-- `get_featured_products(limit)` and `get_popular_products(limit)`
-- `get_products(filters=None, sort=None, query=None)`
-- `get_product(product_id)` and `get_products_by_ids(ids)`
-- `get_categories_with_counts()` and `get_category(name)`
-- `get_deals(limit)` and `get_brands(category=None)`
-- `ping()` and `ensure_indexes()`
+Authentication
 
-Supported product filters are `category`, `brand`, `min_price`, `max_price`, and `min_rating`; supported sort keys are `price_low`, `price_high`, `rating`, `discount`, and `name`. Database operation failures are raised as `DatabaseUnavailableError`, allowing routes to present a friendly 503 page.
+Flask sessions, Werkzeug password hashing
+
+Configuration
+
+python-dotenv
+
+Run locally (Windows PowerShell)
+
+Install and start MongoDB Community Server. The default connection is mongodb://localhost:27017/.
+
+Clone the repository and install its dependencies:
+
+git clone https://github.com/yashsantoshchougule/mongodb-assignment.git
+cd mongodb-assignment
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+py -m pip install -r requirements.txt
+Copy-Item .env.example .env
+
+If necessary, change MONGO_URI, MONGO_DB_NAME, or FLASK_SECRET_KEY in .env.
+
+Import the demonstration catalogue and start the site:
+
+py seed_data.py
+py app.py
+
+Open http://127.0.0.1:5000 in your browser.
+
+The default database name is valuevista_mini. Running py seed_data.py again updates matching sample records instead of duplicating them. If the import reports that MongoDB is unavailable, check that the MongoDB service is running and the URI in .env is correct.
+
+Live demo walkthrough
+
+For a presentation, show the project in this order:
+
+GitHub: Introduce ValueVista Mini and briefly point out the top-level Python files, data/, templates/, and static/.
+
+Tech stack: Explain Flask, MongoDB/PyMongo, HTML/CSS/JavaScript, and Jinja.
+
+Website: Open the homepage to show categories, featured products, and popular products.
+
+Catalogue: Open /products, apply a category or price filter, and change the sort order.
+
+Product details: Open a product to show its specifications and three sample platform prices.
+
+Comparison: Select two or three products and open /compare to show the side-by-side table. The browser remembers the comparison selection in localStorage.
+
+Authentication: Briefly show the registration and login pages.
+
+MongoDB Compass — last: Connect to mongodb://localhost:27017/, open valuevista_mini, and show the collections and one product document.
+
+MongoDB collections
+
+Collection
+
+What it stores
+
+products
+
+Product details, category, prices, specifications, features, and embedded platform listings
+
+categories
+
+The six product categories
+
+platforms
+
+The five demonstration shopping platforms
+
+users
+
+Registered users and hashed passwords
+
+Product specifications can vary by category. For example, a smartphone may contain RAM and battery specifications, while a camera may contain sensor and video specifications. This flexibility is one reason MongoDB is useful for the project.
+
+Notes
+
+Comparison selections are stored in the browser; catalogue and user records are stored in MongoDB.
+
+This is a demonstration catalogue, not a live price-tracking or scraping system.
+
+Some checks in test_routes.py reference older routes (/search, /deals, and /about) that are not defined in the current app.py. Those tests need updating before the complete test suite can pass.
+
+Future scope
+
+The project can be extended with verified retailer APIs or permitted data collectors for live pricing, and with updated tests for the current routes.
